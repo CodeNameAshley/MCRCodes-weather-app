@@ -3,6 +3,6 @@ import App from "./App";
 
 test("renders the words weather app", () => {
   render(<App />);
-  const linkElement = screen.getByText(/Weather App/i);
+  const linkElement = screen.getByText(/Weather App/i); // or 'Weather App'
   expect(linkElement).toBeInTheDocument();
 });
