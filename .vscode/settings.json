@@ -1,3 +1,7 @@
 {
-    "workbench.tree.indent": 20
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#6e3aff"
+    },
 }

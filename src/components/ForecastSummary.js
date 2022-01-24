@@ -1,7 +1,6 @@
 import "../styles/App.css";
 import React from "react";
 import PropTypes from "prop-types";
-// import { location } from "../data/forecast.json";
 
 function ForecastSummary(props) {
   const { date, description, icon, temparature } = props;
@@ -9,7 +8,7 @@ function ForecastSummary(props) {
     <div className="forecast-summary">
       <div className="forecast-summary__date">{date}</div>
       <div className="forecast-summary__icon">{icon}</div>
-      <div className="forecase-summary__temperature">
+      <div className="forecast-summary__temperature">
         {temparature.max}
         &deg;C
       </div>
@@ -19,12 +18,12 @@ function ForecastSummary(props) {
 }
 
 ForecastSummary.propTypes = {
-  date: PropTypes.date.isRequired,
-  description: PropTypes.shape.isRequired,
+  date: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
   temparature: PropTypes.shape({
-    min: PropTypes.number,
-    max: PropTypes.number,
+    min: PropTypes.number.isRequired,
+    max: PropTypes.number.isRequired,
   }).isRequired,
 };
 
