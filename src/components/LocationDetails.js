@@ -5,11 +5,7 @@ import PropTypes from "prop-types";
 
 function LocationDetails(props) {
   const { city, country } = props;
-  return (
-    <div className="post">
-      <h1 className="header">{`${city}, ${country}`}</h1>
-    </div>
-  );
+  return <h1 className="location-details">{`${city}, ${country}`}</h1>;
 }
 
 LocationDetails.propTypes = {

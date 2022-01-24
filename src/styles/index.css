@@ -17,8 +17,14 @@ code {
     monospace;
 }
 
+header {
+  color: #f4acb7;
+  font-weight: bold;
+  font-size: 40px;
+}
+
 h1 {
   color: #f4acb7;
   font-weight: bold;
-  font-size: 30 px;
+  font-size: 30px;
 }
