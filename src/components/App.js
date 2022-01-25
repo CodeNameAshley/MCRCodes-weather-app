@@ -4,16 +4,22 @@ import React from "react";
 import propTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
-// import ForecastSummary from "./ForecastSummary";
+import ForecastSummary from "./ForecastSummary";
 
-const App = ({ location, forecasts }) => {
+const App = ({ forecasts, location }) => {
   const { city, country } = location;
   return (
     <div className="App">
-      <header>Weather App</header>
-      <LocationDetails city={city} country={country} />
-      <ForecastSummaries forecasts={forecasts} />
-      {/* <ForecaseSummary date={date} temperature={temperature} />
+      <header>Bikini Bottom News</header>
+      <main>
+        <LocationDetails city={city} country={country} />
+        <ForecastSummaries forecasts={forecasts} />
+        <ForecastSummary
+          date={forecasts.date}
+          temperature={forecasts.temperature}
+        />
+      </main>
+      {/* 
       <ForecastDetails /> */}
     </div>
   );
@@ -24,7 +30,7 @@ App.propTypes = {
     propTypes.shape({
       date: propTypes.number,
       description: propTypes.string,
-      icon: propTypes.number,
+      icon: propTypes.string,
       temperature: propTypes.shape({
         max: propTypes.number,
         min: propTypes.number,
