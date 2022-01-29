@@ -1,17 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
+import "../styles/ForecastSummaries.css";
 
 export default function ForecastSummaries({ forecasts }) {
   return (
     <div className="forecast-summaries">
       {forecasts.map((forecast) => (
         <ForecastSummary
-          key={forecasts.date}
+          key={forecast.date}
           date={forecast.date}
           description={forecast.description}
           icon={forecast.icon}
-          temparature={forecast.temparature}
+          temperature={forecast.temperature}
+          // wind={forecast.wind}
         />
       ))}
     </div>
@@ -28,8 +30,10 @@ ForecastSummaries.propTypes = {
         min: PropTypes.number,
         max: PropTypes.number,
       }).isRequired,
+      // wind: PropTypes.shape({
+      //   speed: PropTypes.number,
+      //   direction: PropTypes.string,
+      // }).isRequired,
     }).isRequired
   ).isRequired,
 };
-
-// export default ForecastSummaries;

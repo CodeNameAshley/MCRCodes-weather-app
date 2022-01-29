@@ -28,3 +28,8 @@ h1 {
   font-weight: bold;
   font-size: 30px;
 }
+
+p {
+  color: #f08080;
+  text-align: center;
+}

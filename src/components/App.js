@@ -4,26 +4,24 @@ import React from "react";
 import propTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
-import ForecastSummary from "./ForecastSummary";
+// import ForecastSummary from "./ForecastSummary";
 
-const App = ({ forecasts, location }) => {
+export default function App({ forecasts, location }) {
   const { city, country } = location;
+  // const { date, temperature } = forecasts;
   return (
-    <div className="App">
+    <div className="weather-app">
       <header>Bikini Bottom News</header>
       <main>
         <LocationDetails city={city} country={country} />
         <ForecastSummaries forecasts={forecasts} />
-        <ForecastSummary
-          date={forecasts.date}
-          temperature={forecasts.temperature}
-        />
+        {/* <ForecastSummary date={date} temperature={temperature} /> */}
       </main>
       {/* 
       <ForecastDetails /> */}
     </div>
   );
-};
+}
 
 App.propTypes = {
   forecasts: propTypes.arrayOf(
@@ -42,5 +40,3 @@ App.propTypes = {
     country: propTypes.string,
   }).isRequired,
 };
-
-export default App;
