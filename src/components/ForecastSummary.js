@@ -5,19 +5,21 @@ import WeatherIcon from "react-icons-weather";
 
 export default function ForecastSummary(forecast) {
   const { date, description, icon, temperature } = forecast;
-  console.log(forecast);
 
   return (
     <div className="forecast-summary" key={date}>
       <div className="forecast-summary__date">
-        {moment(date).format("ddd Do MMM")}
+        <h1>{moment(date).format("ddd Do MMM")} </h1>
       </div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
-        <WeatherIcon name="owm" iconId={icon} />
+        <h2>
+          <WeatherIcon name="owm" iconId={icon} />
+        </h2>
       </div>
-      <div className="forecast-summary__temperature">{temperature.max}</div>
+      <div className="forecast-summary__temperature">
+        Max: {temperature.max}C <br /> Min: {temperature.min}C
+      </div>
       <div className="forecast-summary__description">{description}</div>
-      {/* <div className="forecast-summary__wind">{wind}</div> */}
     </div>
   );
 }
@@ -32,10 +34,6 @@ ForecastSummary.propTypes = PropTypes.shape(
         min: PropTypes.number,
         max: PropTypes.number,
       }).isRequired,
-      // wind: PropTypes.shape({
-      //   speed: PropTypes.number,
-      //   direction: PropTypes.string,
-      // }).isRequired,
     })
   ).isRequired
 ).isRequired;

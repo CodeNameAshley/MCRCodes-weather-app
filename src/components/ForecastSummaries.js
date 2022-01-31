@@ -13,7 +13,7 @@ export default function ForecastSummaries({ forecasts }) {
           description={forecast.description}
           icon={forecast.icon}
           temperature={forecast.temperature}
-          // wind={forecast.wind}
+          wind={forecast.wind}
         />
       ))}
     </div>
@@ -30,10 +30,10 @@ ForecastSummaries.propTypes = {
         min: PropTypes.number,
         max: PropTypes.number,
       }).isRequired,
-      // wind: PropTypes.shape({
-      //   speed: PropTypes.number,
-      //   direction: PropTypes.string,
-      // }).isRequired,
+      wind: PropTypes.shape({
+        speed: PropTypes.number,
+        direction: PropTypes.string,
+      }).isRequired,
     }).isRequired
   ).isRequired,
 };

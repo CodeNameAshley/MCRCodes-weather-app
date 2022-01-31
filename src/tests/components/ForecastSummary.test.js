@@ -6,7 +6,7 @@ describe("ForecastSummary", () => {
     date: 123456,
     description: "Stub description",
     icon: "stubIcon",
-    temparature: {
+    temperature: {
       min: 12,
       max: 22,
     },
@@ -18,7 +18,7 @@ describe("ForecastSummary", () => {
         date={validProps.date}
         description={validProps.description}
         icon={validProps.icon}
-        temparature={validProps.temparature}
+        temperature={validProps.temperature}
       />
     );
 

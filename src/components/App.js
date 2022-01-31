@@ -1,24 +1,26 @@
 /* eslint-disable react/function-component-definition */
 import "../styles/App.css";
-import React from "react";
+import React, { useState } from "react";
 import propTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
-// import ForecastSummary from "./ForecastSummary";
+import ForecastDetails from "./ForecastDetails";
 
 export default function App({ forecasts, location }) {
   const { city, country } = location;
-  // const { date, temperature } = forecasts;
+  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+  const selectedForecast = forecasts.find(
+    (forecast) => forecast.date === selectedDate
+  );
+
   return (
     <div className="weather-app">
       <header>Bikini Bottom News</header>
       <main>
         <LocationDetails city={city} country={country} />
         <ForecastSummaries forecasts={forecasts} />
-        {/* <ForecastSummary date={date} temperature={temperature} /> */}
+        <ForecastDetails forecast={selectedForecast} />
       </main>
-      {/* 
-      <ForecastDetails /> */}
     </div>
   );
 }
@@ -33,6 +35,10 @@ App.propTypes = {
         max: propTypes.number,
         min: propTypes.number,
       }),
+      wind: propTypes.shape({
+        speed: propTypes.number,
+        direction: propTypes.string,
+      }).isRequired,
     })
   ).isRequired,
   location: propTypes.shape({
