@@ -7,18 +7,24 @@ import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
 
 export default function App({ forecasts, location }) {
-  const { city, country } = location;
   const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
 
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
+
   return (
     <div className="weather-app">
       <header>Bikini Bottom News</header>
       <main>
-        <LocationDetails city={city} country={country} />
-        <ForecastSummaries forecasts={forecasts} />
+        <LocationDetails city={location.city} country={location.country} />
+        <ForecastSummaries
+          forecasts={forecasts}
+          onForecastSelect={handleForecastSelect}
+        />
         <ForecastDetails forecast={selectedForecast} />
       </main>
     </div>
@@ -30,6 +36,7 @@ App.propTypes = {
     propTypes.shape({
       date: propTypes.number,
       description: propTypes.string,
+      humidity: propTypes.number,
       icon: propTypes.string,
       temperature: propTypes.shape({
         max: propTypes.number,
