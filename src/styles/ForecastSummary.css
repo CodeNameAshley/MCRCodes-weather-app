@@ -1,0 +1,16 @@
+button {
+     background-color: #e8e8e4;
+     /* Green */
+     border: none;
+     color: #84a59d;
+     text-align: center;
+     padding: 5px;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 12px;
+     border-radius: 20px;
+}
+
+.forecast-summary__icon{
+     font-size: 50px;
+}

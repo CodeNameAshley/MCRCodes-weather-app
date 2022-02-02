@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.25.0",
     "moment": "^2.29.1",
     "prop-types": "^15.8.1",
     "raf": "^3.4.1",
