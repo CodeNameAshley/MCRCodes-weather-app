@@ -1,4 +1,4 @@
-import "../styles/App.css";
+import "../styles/LocationDetails.css";
 import React from "react";
 import PropTypes from "prop-types";
 // import { location } from "../data/forecast.json";

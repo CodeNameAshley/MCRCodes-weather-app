@@ -1,5 +1,10 @@
 input {
-    margin: 10px;
     color: #f08080;
+    margin-bottom: 10px;
+    margin-top: 0;
     
+}
+
+::placeholder{
+    color: #84a59d;
 }

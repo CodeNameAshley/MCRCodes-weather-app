@@ -3,9 +3,25 @@
 }
 
 .weather-app {
-  margin: 0 20px;
+  /* margin: 0 20px; */
   text-align: center;
 }
+
+header {
+  font-size: 40px;
+  font-weight: bold;
+  background-color: #dadad8;
+  color: #f08080;
+}
+
+h1 {
+  color: #ff9373
+}
+
+h2 {
+  color: #ff9373
+}
+
 
 /* .App-logo {
   height: 40vmin;

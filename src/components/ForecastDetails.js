@@ -9,14 +9,25 @@ export default function ForecastDetails({ forecast }) {
   return (
     <div className="forecast-details" key={date}>
       <div className="forecast-details__date">
-        {moment(date).format("ddd Do MMM")}
+        📅{moment(date).format("ddd Do MMM")}📅
       </div>
+      <br />
+      🌫️Humidity🌫️
       <div className="forecast-details__humidity">{humidity}</div>
+      <br />
       <div className="forecast-details__temperature">
-        Max: {temperature.max}&deg;C <br /> Min: {temperature.min}&deg;C
+        🌡️Temperature🌡️
+        <br />
+        Max: {temperature.max}&deg;C <br /> Min: {temperature.min}
+        &deg;C
       </div>
+      <br />
       <div className="forecast-details__wind">
-        {wind.speed} {wind.direction}
+        🌬️Wind🌬️
+        <br />
+        Speed: {wind.speed}
+        <br />
+        Direction: {wind.direction}
       </div>
     </div>
   );

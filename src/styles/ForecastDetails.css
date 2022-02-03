@@ -1,6 +1,10 @@
 .forecast-details {
     border-radius: 25px;
-    margin: 20px;
+    margin: auto;
     padding: 15px;
     background-color:rgb(255, 255, 255, 0.5);
+    color: #ffb0a3;
+    font-weight: 650;
+    width: 100%;
 }
+

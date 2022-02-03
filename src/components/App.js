@@ -35,6 +35,7 @@ export default function App() {
     <div className="weather-app">
       <header>The Weather in {location.city}</header>
       <main>
+        <h1>📍 Your current location is:</h1>
         <LocationDetails city={location.city} country={location.country} />
         <SearchForm
           searchText={searchText}
@@ -45,6 +46,7 @@ export default function App() {
           forecasts={forecasts}
           onForecastSelect={handleForecastSelect}
         />
+        <h2>🗓️ Detailed forecast for the day 🗓️</h2>
         {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
       </main>
     </div>
